@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spinning Vinyl Record</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f3f0e9;
+    }
+
+    svg {
+        width: 300px;
+        height: 300px;
+    }
+
+    .record {
+        transform-origin: 150px 150px;
+        animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<svg width="300" height="300" viewBox="0 0 300 300"
+xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <radialGradient id="vinyl">
+            <stop offset="0%" stop-color="#454545"/>
+            <stop offset="65%" stop-color="#171717"/>
+            <stop offset="100%" stop-color="#080808"/>
+        </radialGradient>
+
+        <radialGradient id="label">
+            <stop offset="0%" stop-color="#f1c27d"/>
+            <stop offset="100%" stop-color="#bd744a"/>
+        </radialGradient>
+    </defs>
+
+    <!-- Record shadow -->
+    <ellipse cx="150" cy="263" rx="105" ry="12"
+    fill="#000" opacity="0.12"/>
+
+    <!-- Spinning record -->
+    <g class="record">
+
+        <!-- Vinyl body -->
+        <circle cx="150" cy="145" r="115"
+        fill="url(#vinyl)"/>
+
+        <!-- Vinyl grooves -->
+        <g fill="none" stroke="#555"
+        stroke-width="1" opacity="0.7">
+
+            <circle cx="150" cy="145" r="105"/>
+            <circle cx="150" cy="145" r="98"/>
+            <circle cx="150" cy="145" r="91"/>
+            <circle cx="150" cy="145" r="84"/>
+            <circle cx="150" cy="145" r="77"/>
+            <circle cx="150" cy="145" r="70"/>
+            <circle cx="150" cy="145" r="63"/>
+        </g>
+
+        <!-- Center album label -->
+        <circle cx="150" cy="145" r="48"
+        fill="url(#label)"/>
+
+        <!-- Label decoration -->
+        <circle cx="150" cy="145" r="39"
+        fill="none" stroke="#f8dfb4"
+        stroke-width="1.5"/>
+
+        <text x="150" y="130"
+        font-family="Georgia" font-size="9"
+        text-anchor="middle" fill="#38271e"
+        letter-spacing="2">
+            MUSIC
+        </text>
+
+        <text x="150" y="153"
+        font-family="Georgia" font-size="15"
+        font-weight="bold" text-anchor="middle"
+        fill="#38271e">
+            VINYL
+        </text>
+
+        <text x="150" y="169"
+        font-family="Arial" font-size="7"
+        text-anchor="middle" fill="#38271e"
+        letter-spacing="1">
+            SIDE A
+        </text>
+
+        <!-- Center hole -->
+        <circle cx="150" cy="145" r="5"
+        fill="#171717"/>
+
+    </g>
+
+</svg>
+
+</body>
+</html>
