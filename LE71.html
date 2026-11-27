@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>8 Sweet Graphical Arts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            color: #795548;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            gap: 30px;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        canvas {
+            width: 200px;
+            height: 200px;
+        }
+
+        p {
+            font-weight: bold;
+            color: #795548;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Sweet Treats - Canvas Graphical Arts</h1>
+
+<div class="container">
+
+    <div>
+        <canvas id="chocolate" width="200" height="200"></canvas>
+        <p>1. Chocolate Bar</p>
+    </div>
+
+    <div>
+        <canvas id="icecream" width="200" height="200"></canvas>
+        <p>2. Ice Cream</p>
+    </div>
+
+    <div>
+        <canvas id="milkshake" width="200" height="200"></canvas>
+        <p>3. Milkshake</p>
+    </div>
+
+    <div>
+        <canvas id="coffee" width="200" height="200"></canvas>
+        <p>4. Coffee</p>
+    </div>
+
+    <div>
+        <canvas id="milk" width="200" height="200"></canvas>
+        <p>5. Milk</p>
+    </div>
+
+    <div>
+        <canvas id="candy" width="200" height="200"></canvas>
+        <p>6. Chocolate Candy</p>
+    </div>
+
+    <div>
+        <canvas id="cupcake" width="200" height="200"></canvas>
+        <p>7. Cupcake</p>
+    </div>
+
+    <div>
+        <canvas id="donut" width="200" height="200"></canvas>
+        <p>8. Donut</p>
+    </div>
+
+</div>
+
+<script>
+
+// 1. CHOCOLATE BAR
+let c = document.getElementById("chocolate").getContext("2d");
+
+c.fillStyle = "#8B4513";
+c.beginPath();
+c.roundRect(30, 45, 140, 110, 10);
+c.fill();
+
+c.fillStyle = "#A0522D";
+c.fillRect(38, 53, 124, 94);
+
+c.strokeStyle = "#6D3515";
+c.lineWidth = 3;
+c.strokeRect(100, 53, 0, 94);
+c.strokeRect(38, 100, 124, 0);
+
+c.fillStyle = "#C08045";
+c.fillRect(43, 58, 52, 38);
+c.fillRect(105, 58, 52, 38);
+c.fillRect(43, 105, 52, 37);
+c.fillRect(105, 105, 52, 37);
+
+
+// 2. ICE CREAM
+c = document.getElementById("icecream").getContext("2d");
+
+c.fillStyle = "#D69A55";
+c.beginPath();
+c.moveTo(55, 105);
+c.lineTo(145, 105);
+c.lineTo(100, 185);
+c.closePath();
+c.fill();
+
+c.strokeStyle = "#A86D38";
+c.lineWidth = 2;
+for (let i = 0; i < 4; i++) {
+    c.beginPath();
+    c.moveTo(75 + i * 15, 115);
+    c.lineTo(95 + i * 5, 165);
+    c.stroke();
+}
+
+c.fillStyle = "#F6A6B5";
+c.beginPath();
+c.arc(100, 85, 43, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#FFD76A";
+c.beginPath();
+c.arc(75, 78, 8, 0, Math.PI * 2);
+c.arc(125, 78, 8, 0, Math.PI * 2);
+c.fill();
+
+
+// 3. MILKSHAKE
+c = document.getElementById("milkshake").getContext("2d");
+
+c.fillStyle = "#E9A6B8";
+c.fillRect(93, 20, 12, 75);
+
+c.fillStyle = "#F5B6C5";
+c.beginPath();
+c.moveTo(45, 65);
+c.lineTo(155, 65);
+c.lineTo(140, 175);
+c.lineTo(60, 175);
+c.closePath();
+c.fill();
+
+c.fillStyle = "#F9D9DF";
+c.beginPath();
+c.arc(100, 65, 50, Math.PI, 0);
+c.fill();
+
+c.beginPath();
+c.arc(70, 65, 20, 0, Math.PI * 2);
+c.arc(100, 48, 22, 0, Math.PI * 2);
+c.arc(130, 65, 20, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#E96F8D";
+c.beginPath();
+c.arc(100, 30, 6, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#FFFFFF";
+c.fillRect(75, 95, 5, 45);
+
+
+// 4. COFFEE
+c = document.getElementById("coffee").getContext("2d");
+
+c.fillStyle = "#F3D5A5";
+c.fillRect(45, 65, 110, 105);
+
+c.fillStyle = "#FFFFFF";
+c.beginPath();
+c.ellipse(100, 65, 55, 15, 0, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#5C3825";
+c.beginPath();
+c.ellipse(100, 65, 44, 10, 0, 0, Math.PI * 2);
+c.fill();
+
+c.strokeStyle = "#A66B42";
+c.lineWidth = 5;
+c.beginPath();
+c.moveTo(75, 95);
+c.lineTo(125, 95);
+c.stroke();
+
+c.fillStyle = "#8B5E3C";
+c.fillRect(45, 140, 110, 30);
+
+c.fillStyle = "#FFFFFF";
+c.font = "bold 15px Arial";
+c.textAlign = "center";
+c.fillText("COFFEE", 100, 160);
+
+
+// 5. MILK
+c = document.getElementById("milk").getContext("2d");
+
+c.fillStyle = "#78BDE8";
+c.fillRect(78, 35, 44, 18);
+
+c.fillStyle = "#FFFFFF";
+c.beginPath();
+c.moveTo(78, 53);
+c.lineTo(122, 53);
+c.lineTo(145, 80);
+c.lineTo(145, 175);
+c.lineTo(55, 175);
+c.lineTo(55, 80);
+c.closePath();
+c.fill();
+
+c.strokeStyle = "#D5D5D5";
+c.lineWidth = 3;
+c.stroke();
+
+c.fillStyle = "#8BC8ED";
+c.fillRect(60, 120, 80, 50);
+
+c.fillStyle = "#FFFFFF";
+c.beginPath();
+c.arc(100, 100, 25, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#78BDE8";
+c.font = "bold 14px Arial";
+c.textAlign = "center";
+c.fillText("MILK", 100, 105);
+
+
+// 6. CHOCOLATE CANDY
+c = document.getElementById("candy").getContext("2d");
+
+c.fillStyle = "#F5A6B5";
+c.beginPath();
+c.moveTo(55, 85);
+c.lineTo(25, 55);
+c.lineTo(25, 115);
+c.closePath();
+c.fill();
+
+c.beginPath();
+c.moveTo(145, 85);
+c.lineTo(175, 55);
+c.lineTo(175, 115);
+c.closePath();
+c.fill();
+
+c.fillStyle = "#8B4513";
+c.beginPath();
+c.arc(100, 85, 48, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#A0522D";
+c.beginPath();
+c.arc(100, 85, 37, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#D9A066";
+c.beginPath();
+c.arc(85, 70, 9, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#F5C16C";
+c.beginPath();
+c.arc(115, 100, 7, 0, Math.PI * 2);
+c.fill();
+
+
+// 7. CUPCAKE
+c = document.getElementById("cupcake").getContext("2d");
+
+c.fillStyle = "#F5B75F";
+c.beginPath();
+c.moveTo(55, 95);
+c.lineTo(145, 95);
+c.lineTo(135, 165);
+c.lineTo(65, 165);
+c.closePath();
+c.fill();
+
+c.strokeStyle = "#D58B42";
+c.lineWidth = 2;
+c.stroke();
+
+c.fillStyle = "#F29BA8";
+c.beginPath();
+c.arc(100, 85, 40, Math.PI, 0);
+c.fill();
+
+c.beginPath();
+c.arc(75, 85, 22, 0, Math.PI * 2);
+c.arc(125, 85, 22, 0, Math.PI * 2);
+c.arc(100, 55, 24, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#F8D96B";
+c.beginPath();
+c.arc(100, 28, 8, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#FFFFFF";
+c.fillRect(75, 115, 6, 6);
+c.fillRect(95, 135, 6, 6);
+c.fillRect(120, 115, 6, 6);
+
+
+// 8. DONUT
+c = document.getElementById("donut").getContext("2d");
+
+c.fillStyle = "#F4B85E";
+c.beginPath();
+c.arc(100, 105, 70, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#8B4513";
+c.beginPath();
+c.arc(100, 105, 62, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#F6A4B4";
+c.beginPath();
+c.arc(100, 105, 48, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#FFFFFF";
+c.beginPath();
+c.arc(100, 105, 20, 0, Math.PI * 2);
+c.fill();
+
+c.fillStyle = "#FFD966";
+c.fillRect(55, 75, 10, 5);
+c.fillRect(125, 85, 10, 5);
+c.fillRect(80, 140, 10, 5);
+
+c.fillStyle = "#71CDAA";
+c.fillRect(130, 120, 10, 5);
+
+c.fillStyle = "#FFFFFF";
+c.fillRect(65, 120, 10, 5);
+
+</script>
+
+</body>
+</html>
