@@ -3,46 +3,50 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Becoming - SVG Text Art</title>
 
 <style>
-body {
-    margin: 0;
-    background: #f7f5ef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-}
+    body {
+        margin: 0;
+        background: #f7f6f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+    }
 
-svg {
-    max-width: 100%;
-    height: auto;
-}
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
 
-text {
-    font-family: Arial, sans-serif;
-    fill: #467d68;
-}
+    .poem {
+        fill: #477b68;
+        text-anchor: middle;
+        font-family: Arial, sans-serif;
+    }
 
-.title {
-    font-family: Georgia, serif;
-    font-size: 42px;
-    letter-spacing: 8px;
-    fill: #315c49;
-}
+    .large {
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-.poem {
-    font-size: 17px;
-    letter-spacing: 1px;
-}
+    .medium {
+        font-size: 19px;
+    }
 
-.small {
-    font-size: 13px;
-    letter-spacing: 2px;
-}
+    .small {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
 
+    .tiny {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
 </style>
 </head>
 
@@ -51,144 +55,109 @@ text {
 <svg width="900" height="780" viewBox="0 0 900 780"
 xmlns="http://www.w3.org/2000/svg">
 
-<defs>
+<!-- Background -->
+<rect width="900" height="780" fill="#f7f6f0"/>
 
-    <!-- Tree canopy text paths -->
-    <path id="branch1" d="M190 330 Q450 30 710 330"/>
-    <path id="branch2" d="M230 365 Q450 130 670 365"/>
-    <path id="branch3" d="M270 395 Q450 210 630 395"/>
-    <path id="branch4" d="M300 425 Q450 290 600 425"/>
+<!-- Small sun -->
+<circle cx="450" cy="95" r="25"
+fill="none" stroke="#c69b67" stroke-width="2"/>
 
-    <!-- Lower canopy -->
-    <path id="lower1" d="M250 430 Q450 570 650 430"/>
-    <path id="lower2" d="M290 450 Q450 550 610 450"/>
+<path d="M450 58 V48 M450 132 V142
+M413 95 H403 M487 95 H497"
+stroke="#c69b67" stroke-width="2"/>
 
-    <!-- Ground / roots -->
-    <path id="roots" d="M250 650 Q450 750 650 650"/>
-
-</defs>
-
-<circle cx="450" cy="390" r="310"
-fill="none" stroke="#d9e0d5" stroke-width="1"/>
-
-<circle cx="450" cy="390" r="295"
-fill="none" stroke="#d9e0d5" stroke-width="1"
-stroke-dasharray="3 8"/>
+<!-- TREE CANOPY: POEM TEXT -->
 
 <g class="poem">
 
-<text>
-<textPath href="#branch1" startOffset="50%"
-text-anchor="middle">
-I AM NOT WHO I WAS YESTERDAY • I AM STILL GROWING •
-</textPath>
-</text>
+    <text x="450" y="175" class="small">
+        I AM STILL LEARNING
+    </text>
 
-<text>
-<textPath href="#branch2" startOffset="50%"
-text-anchor="middle">
-NOR AM I WHO I WILL BE TOMORROW •
-</textPath>
-</text>
+    <text x="450" y="211" class="medium">
+        TO BECOME WHO I AM
+    </text>
 
-<text>
-<textPath href="#branch3" startOffset="50%"
-text-anchor="middle">
-I GROW THROUGH EVERY MISTAKE •
-</textPath>
-</text>
+    <text x="450" y="247" class="large">
+        MEANT TO BE
+    </text>
 
-<text>
-<textPath href="#branch4" startOffset="50%"
-text-anchor="middle">
-I LEARN THROUGH EVERY FALL •
-</textPath>
-</text>
+    <text x="450" y="283" class="medium">
+        I GROW THROUGH EVERY MISTAKE
+    </text>
 
-<text>
-<textPath href="#lower1" startOffset="50%"
-text-anchor="middle">
-SOME DAYS I BLOOM • SOME DAYS I BEND •
-</textPath>
-</text>
+    <text x="450" y="319" class="medium">
+        AND LEARN THROUGH EVERY FALL
+    </text>
 
-<text>
-<textPath href="#lower2" startOffset="50%"
-text-anchor="middle">
-BUT EVERY STEP BRINGS ME CLOSER TO MYSELF
-</textPath>
-</text>
+    <text x="450" y="355" class="large">
+        SOME DAYS I BLOOM
+    </text>
+
+    <text x="450" y="391" class="medium">
+        SOME DAYS I BEND
+    </text>
+
+    <text x="450" y="427" class="small">
+        BUT I NEVER STOP GROWING
+    </text>
 
 </g>
 
-<g fill="#315c49">
-
-<text x="435" y="390" font-size="23"
-font-weight="bold" transform="rotate(-90 435 390)">
-I AM A WORK IN PROGRESS
-</text>
-
-<text x="465" y="390" font-size="23"
-font-weight="bold" transform="rotate(90 465 390)">
-AND THAT IS ENOUGH
-</text>
-
-</g>
-
-
-<g fill="none" stroke="#78977b"
-stroke-width="2">
-
-<path d="M450 430 Q390 360 350 310"/>
-<path d="M450 430 Q510 360 550 310"/>
-<path d="M450 420 Q400 390 320 390"/>
-<path d="M450 420 Q500 390 580 390"/>
-
-</g>
-
-
-<g fill="#719579" font-size="13">
-
-<text x="290" y="300" transform="rotate(-35 290 300)">GROW</text>
-<text x="560" y="300" transform="rotate(35 560 300)">LEARN</text>
-<text x="330" y="350" transform="rotate(-20 330 350)">CHANGE</text>
-<text x="510" y="350" transform="rotate(20 510 350)">BELIEVE</text>
-
-</g>
-
+<!-- Tree trunk: poem continues -->
 
 <g class="poem">
 
-<text>
-<textPath href="#roots" startOffset="50%"
-text-anchor="middle">
-EVERY STEP IS PART OF THE JOURNEY • KEEP BECOMING •
-</textPath>
-</text>
+    <text x="450" y="472" class="medium">
+        EVERY STEP
+    </text>
+
+    <text x="450" y="503" class="large">
+        BRINGS ME CLOSER
+    </text>
+
+    <text x="450" y="534" class="medium">
+        TO MYSELF
+    </text>
 
 </g>
 
+<!-- Tree trunk illustration -->
+<path d="M430 550 L420 625
+M470 550 L480 625"
+fill="none" stroke="#8b7054" stroke-width="5"
+stroke-linecap="round"/>
 
-<path d="M350 500 Q450 510 550 500"
-stroke="#78977b" stroke-width="2" fill="none"/>
+<path d="M450 550 V625"
+stroke="#8b7054" stroke-width="3"/>
 
+<!-- Roots -->
+<g fill="none" stroke="#8b7054"
+stroke-width="2.5" stroke-linecap="round">
 
-<text x="450" y="590"
-text-anchor="middle" class="title">
-BECOMING
-</text>
+    <path d="M450 620 Q405 655 370 655"/>
+    <path d="M450 620 Q495 655 530 655"/>
+    <path d="M450 620 Q430 665 425 675"/>
+    <path d="M450 620 Q470 665 475 675"/>
 
-<text x="450" y="620"
-text-anchor="middle" class="small">
-THE ART OF GROWING INTO YOURSELF
-</text>
+</g>
 
-<text x="450" y="690"
-text-anchor="middle"
-font-size="15" letter-spacing="3"
-fill="#78977b">
-ONE DAY • ONE STEP • ONE CHANGE AT A TIME
-</text>
+<!-- Final poem -->
+<g class="poem">
+
+    <text x="450" y="700" class="medium">
+        I AM A WORK IN PROGRESS
+    </text>
+
+    <text x="450" y="730" class="small">
+        AND THAT IS ENOUGH.
+    </text>
+
+</g>
+
+<!-- Small ground line -->
+<path d="M350 747 H550"
+stroke="#b6aa95" stroke-width="1.5"/>
 
 </svg>
 
