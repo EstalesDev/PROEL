@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Becoming - SVG Text Art</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #f7f6f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .poem {
+        fill: #477b68;
+        text-anchor: middle;
+        font-family: Arial, sans-serif;
+    }
+
+    .large {
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .medium {
+        font-size: 19px;
+    }
+
+    .small {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .tiny {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+</style>
+</head>
+
+<body>
+
+<svg width="900" height="780" viewBox="0 0 900 780"
+xmlns="http://www.w3.org/2000/svg">
+
+<!-- Background -->
+<rect width="900" height="780" fill="#f7f6f0"/>
+
+<!-- Small sun -->
+<circle cx="450" cy="95" r="25"
+fill="none" stroke="#c69b67" stroke-width="2"/>
+
+<path d="M450 58 V48 M450 132 V142
+M413 95 H403 M487 95 H497"
+stroke="#c69b67" stroke-width="2"/>
+
+<!-- TREE CANOPY: POEM TEXT -->
+
+<g class="poem">
+
+    <text x="450" y="175" class="small">
+        I AM STILL LEARNING
+    </text>
+
+    <text x="450" y="211" class="medium">
+        TO BECOME WHO I AM
+    </text>
+
+    <text x="450" y="247" class="large">
+        MEANT TO BE
+    </text>
+
+    <text x="450" y="283" class="medium">
+        I GROW THROUGH EVERY MISTAKE
+    </text>
+
+    <text x="450" y="319" class="medium">
+        AND LEARN THROUGH EVERY FALL
+    </text>
+
+    <text x="450" y="355" class="large">
+        SOME DAYS I BLOOM
+    </text>
+
+    <text x="450" y="391" class="medium">
+        SOME DAYS I BEND
+    </text>
+
+    <text x="450" y="427" class="small">
+        BUT I NEVER STOP GROWING
+    </text>
+
+</g>
+
+<!-- Tree trunk: poem continues -->
+
+<g class="poem">
+
+    <text x="450" y="472" class="medium">
+        EVERY STEP
+    </text>
+
+    <text x="450" y="503" class="large">
+        BRINGS ME CLOSER
+    </text>
+
+    <text x="450" y="534" class="medium">
+        TO MYSELF
+    </text>
+
+</g>
+
+<!-- Tree trunk illustration -->
+<path d="M430 550 L420 625
+M470 550 L480 625"
+fill="none" stroke="#8b7054" stroke-width="5"
+stroke-linecap="round"/>
+
+<path d="M450 550 V625"
+stroke="#8b7054" stroke-width="3"/>
+
+<!-- Roots -->
+<g fill="none" stroke="#8b7054"
+stroke-width="2.5" stroke-linecap="round">
+
+    <path d="M450 620 Q405 655 370 655"/>
+    <path d="M450 620 Q495 655 530 655"/>
+    <path d="M450 620 Q430 665 425 675"/>
+    <path d="M450 620 Q470 665 475 675"/>
+
+</g>
+
+<!-- Final poem -->
+<g class="poem">
+
+    <text x="450" y="700" class="medium">
+        I AM A WORK IN PROGRESS
+    </text>
+
+    <text x="450" y="730" class="small">
+        AND THAT IS ENOUGH.
+    </text>
+
+</g>
+
+<!-- Small ground line -->
+<path d="M350 747 H550"
+stroke="#b6aa95" stroke-width="1.5"/>
+
+</svg>
+
+</body>
+</html>
